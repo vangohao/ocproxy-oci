@@ -22,7 +22,7 @@ if {$url == ""} {
 }
 
 # 开始连接
-spawn openconnect $oc_args --script-tun --script "ocproxy -D 1080 -g" --user $user $url
+spawn openconnect $oc_args --servercert pin-sha256:BtHKnJ5Rw7/in/4XzhnVvi+1Bu2fy8Z4tKU0ddlFRFY= --script-tun --script "ocproxy -D 1080 -g" --user $user $url
 
 # 期待密码提示
 expect "Password:"
